@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iptvresellers.org</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117; --panel: #161b22; --muted: #8b949e; --text: #c9d1d9; --accent: #238636; --border: #30363d; --link: #58a6ff; --chip: #1f6feb;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Vazirmatn', system-ui, Segoe UI, Roboto, Arial; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 16px; }
+    .topbar { position: sticky; top: 0; z-index: 50; background: #010409; border-bottom: 1px solid var(--border); }
+    .topbar-inner { display: flex; align-items: center; gap: 12px; padding: 10px 16px; }
+    .logo { width: 28px; height: 28px; border-radius: 6px; background: #fff url('/logo.png') center/70% no-repeat; }
+    .search { flex: 1; }
+    .search input { width: 100%; background: #0d1117; border: 1px solid var(--border); color: var(--text); padding: 8px 10px; border-radius: 6px; }
+    .btn { display: inline-flex; align-items: center; gap: 6px; background: var(--panel); border: 1px solid var(--border); color: var(--text); padding: 6px 10px; border-radius: 6px; cursor: pointer; }
+    .btn:hover { background: #1c2128; }
+    .repo-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 16px 0; }
+    .badge { font-size: 12px; border: 1px solid var(--border); padding: 2px 8px; border-radius: 999px; color: var(--muted); }
+    .tabs { display: flex; gap: 12px; border-bottom: 1px solid var(--border); }
+    .tab { padding: 10px 12px; border-bottom: 2px solid transparent; color: var(--muted); }
+    .tab.active { color: var(--text); border-color: #f78166; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media(min-width:980px) { .grid { grid-template-columns: 2.2fr 1fr; } }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; }
+    .file-list { width: 100%; }
+    .row { display: grid; grid-template-columns: 24px 1.5fr 1fr 1fr; gap: 12px; padding: 10px 12px; border-top: 1px solid var(--border); align-items: center; }
+    .row:first-child { border-top: 0; }
+    .icon { width: 20px; height: 20px; border-radius: 4px; background: #30363d; display: inline-block; }
+    .row a { color: var(--text); }
+    .muted { color: var(--muted); }
+    .right { text-align: left; }
+    .sidebar { padding: 12px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 12px; }
+    .chip { background: var(--chip); color: #fff; font-size: 12px; padding: 4px 8px; border-radius: 999px; }
+    .cta { display: grid; gap: 8px; margin-top: 12px; }
+    .stat { font-size: 13px; color: var(--muted); }
+    .contributors { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .avatar { width: 28px; height: 28px; border-radius: 50%; background: #30363d; }
+    .footer { color: var(--muted); font-size: 13px; text-align: center; padding: 24px; }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner container">
+    <div class="logo" aria-label="logo"></div>
+    <strong>iptvresellers</strong>
+    <span>/</span>
+    <strong>iptvresellers.org</strong>
+    <div class="search"><input placeholder="Search or jump to…"></div>
+    <button class="btn">Login</button>
+    <button class="btn">Sign Up</button>
+  </div>
+</header>
+<main class="container">
+  <section class="repo-header">
+    <h1 style="margin:0;font-size:22px">iptvresellers / iptvresellers.org <span class="badge">Public</span></h1>
+    <span class="badge">⭐ <span id="stars">9.6k</span></span>
+    <span class="badge">🍴 <span id="forks">3.9k</span></span>
+  </section>
+  <nav class="tabs">
+    <a class="tab active" href="#">Code</a>
+    <a class="tab" href="#">Issues</a>
+    <a class="tab" href="#">Pull Requests</a>
+    <a class="tab" href="#">Security</a>
+    <a class="tab" href="#">Insight</a>
+  </nav>
+  <section class="grid" style="margin-top:16px;">
+    <div class="panel">
+      <div class="row muted">
+        <div></div>
+        <div>Name</div>
+        <div>Last Commit</div>
+        <div class="right">Message</div>
+      </div>
+      <div class="row">
+        <span class="icon" title="folder"></span>
+        <a href="#">streams</a>
+        <span class="muted">2 days ago</span>
+        <span class="muted right">[Bot] Update /streams</span>
+      </div>
+      <div class="row">
+        <span class="icon"></span>
+        <a href="#">README.md</a>
+        <span class="muted">2 weeks ago</span>
+        <span class="muted right">Update README</span>
+      </div>
+      <div class="row">
+        <span class="icon"></span>
+        <a href="#">FAQ.md</a>
+        <span class="muted">2 years ago</span>
+        <span class="muted right">Frequently Asked Questions</span>
+      </div>
+    </div>
+    <aside class="panel sidebar">
+      <h3 style="margin:6px 0 8px">About</h3>
+      <p style="margin:0 0 8px;line-height:1.8">A curated collection of public IPTV channels from around the globe. Inspired by GitHub’s UI to showcase your project, website, and Telegram channel in one place.</p>
+      <div class="chips">
+        <span class="chip">iptv</span>
+        <span class="chip">m3u</span>
+        <span class="chip">streams</span>
+        <span class="chip">playlist</span>
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://iptvresellers.org" target="_blank" rel="noopener">🌐 Website</a>
+        <a class="btn" href="https://t.me/iptvresellers12" target="_blank" rel="noopener">📣 Telegram</a>
+        <a class="btn" href="mailto:contact@iptvresellers.org" title="Email">✉️ Contact</a>
+      </div>
+      <hr style="border-color:var(--border);margin:14px 0">
+      <div class="stat">⭐ Stars: <strong id="side-stars">9,620</strong></div>
+      <div class="stat">🍴 Forks: <strong id="side-forks">3,910</strong></div>
+      <div class="stat">👀 Followers: <strong>1,900</strong></div>
+    </aside>
+  </section>
+  <footer class="footer">
+    Built with ❤️ for iptvresellers.org — Inspired by GitHub's design.
+  </footer>
+</main>
+</body>
+</html>
